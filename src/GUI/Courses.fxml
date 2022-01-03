@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.SepiaTone?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.CoursesController">
+   <children>
+      <AnchorPane id="AnchorPane" prefHeight="417.0" prefWidth="700.0">
+         <children>
+            <JFXTextField fx:id="depart_ajout" focusColor="#48a5ea" layoutX="133.0" layoutY="175.0" prefHeight="25.0" prefWidth="217.0" promptText="depart" />
+            <Label layoutX="133.0" layoutY="31.0" text="Ajouter une Course" textFill="#48a5ea">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <JFXComboBox fx:id="partenaire_ajout" focusColor="#48a5ea" labelFloat="true" layoutX="133.0" layoutY="128.0" prefHeight="25.0" prefWidth="217.0" />
+            <JFXButton layoutX="206.0" layoutY="241.0" onAction="#Reset" prefHeight="29.0" prefWidth="116.0" text="Reset All" />
+            <JFXButton fx:id="ajout" layoutX="375.0" layoutY="236.0" onAction="#AjouterCourse" prefHeight="39.0" prefWidth="116.0" style="-fx-background-color: #48A5EA;" text="Confirmer" textFill="WHITE" />
+            <Separator layoutX="133.0" layoutY="68.0" prefHeight="1.0" prefWidth="520.0" />
+            <JFXTextField fx:id="destination_ajout" focusColor="#48a5ea" layoutX="402.0" layoutY="175.0" prefHeight="25.0" prefWidth="217.0" promptText="Destination" />
+            <DatePicker fx:id="date_ajout_courses" layoutX="402.0" layoutY="126.0" prefHeight="29.0" prefWidth="207.0">
+               <effect>
+                  <SepiaTone level="0.12" />
+               </effect>
+            </DatePicker>
+            <Text layoutX="402.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date" />
+            <Label fx:id="success" layoutX="433.0" layoutY="44.0" textFill="#14b914">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="error" layoutX="433.0" layoutY="44.0" textFill="#ff3a2f">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Text layoutX="133.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choisir un partenaire" />
+            <Pane prefHeight="417.0" prefWidth="110.0" style="-fx-background-color: #48A5EA;">
+               <children>
+                  <ImageView fitHeight="116.0" fitWidth="116.0" layoutX="-3.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/logo3.png" />
+                     </image>
+                  </ImageView>
+                  <Text fill="WHITE" layoutX="19.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Twasalni ?" textAlignment="RIGHT" wrappingWidth="67.5911425203085" />
+                  <Group layoutX="9.0" layoutY="132.0">
+                     <children>
+                        <Hyperlink fx:id="admin" layoutX="5.0" layoutY="254.0" onAction="#goToAdmin" prefHeight="26.0" prefWidth="88.0" text="Admin Page" textFill="WHITE" />
+                        <Hyperlink fx:id="Accueil" onAction="#goToAcceuil" prefHeight="26.0" prefWidth="88.0" text="Accueil" textFill="WHITE" />
+                        <Hyperlink fx:id="profil" layoutY="35.0" onAction="#goToProfil" prefHeight="26.0" prefWidth="88.0" text="Profil" textFill="WHITE" />
+                        <Hyperlink fx:id="reservation" layoutX="1.0" layoutY="66.0" onAction="#goToReservation" prefHeight="26.0" prefWidth="88.0" text="Reservation" textFill="WHITE" />
+                        <Hyperlink fx:id="course" layoutX="2.0" layoutY="100.0" onAction="#goToCourse" prefHeight="26.0" prefWidth="88.0" text="Course" textFill="WHITE" />
+                        <Hyperlink fx:id="abonnement" layoutX="3.0" layoutY="132.0" onAction="#goToAbonne" prefHeight="26.0" prefWidth="88.0" text="Abonnement" textFill="WHITE" />
+                        <Hyperlink fx:id="login" layoutX="5.0" layoutY="201.0" onAction="#goToLogin" prefHeight="26.0" prefWidth="88.0" text="Login" textFill="WHITE" />
+                        <Hyperlink fx:id="feedback" layoutX="5.0" layoutY="166.0" onAction="#goToFeedBack" onMouseClicked="#FeedMenu" prefHeight="26.0" prefWidth="88.0" text="FeedBack" textFill="WHITE" />
+                     </children>
+                  </Group>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

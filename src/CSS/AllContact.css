@@ -1,0 +1,48 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Apr 9, 2020, 2:04:01 PM
+    Author     : Maurel
+*/
+
+.SearchText{
+    -fx-text-fill: #000;
+    -fx-font-family: 'Yu Gothic Medium';
+}
+
+.Search{
+    
+    -fx-background-radius: 20px;
+    -fx-border-radius: 20px;
+    -fx-background-color: #fff;
+    -fx-border-color: #8d8d8d;
+}
+
+.Search:hover{
+    
+    -fx-background-radius: 20px;
+    -fx-border-radius: 20px;
+    -fx-background-color: #fff;
+    -fx-border-color: #2990cc;
+}
+
+.Search:focused{
+    
+    -fx-background-radius: 20px;
+    -fx-border-radius: 20px;
+    -fx-background-color: #fff;
+    -fx-border-color: #C21F47;
+}
+
+.Table{
+    -fx-background-radius : 5px;
+}
+
+.Title{
+    -fx-text-fill: #000;
+    -fx-font-family: 'Yu Gothic Medium';
+    -fx-font-size: 20px;
+}

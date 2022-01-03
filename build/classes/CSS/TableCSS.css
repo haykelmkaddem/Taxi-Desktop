@@ -1,0 +1,47 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Apr 14, 2020, 1:47:57 PM
+    Author     : USER
+*/
+
+
+.table-view{
+    -fx-background-color: transparent;
+}
+
+.table-view:focused{
+    -fx-border-width:0px;
+    -fx-background-color: transparent;
+}
+
+.table-row-cell{
+    -fx-background-color: #D3D3D3;
+    -fx-background-insets:  0, 0 0 1 0;
+    -fx-padding: 0.0em; 
+}
+
+.table-row-cell:hover{
+    -fx-background-color: #1e90ff;
+    -fx-background-insets:  0, 0 0 1 0;
+    -fx-padding: 0.0em; 
+}
+
+.table-col{
+    -fx-background-color: #2990cc;
+}
+
+.Link{
+    -fx-text-fill: #fff;
+    -fx-font-family: 'Yu Gothic Medium';
+    -fx-font-size: 15px;
+}
+.Link:hover{
+    -fx-cursor: hand;
+    -fx-text-fill: #2a73ff;
+    -fx-font-family: 'Yu Gothic Medium';
+    -fx-font-size: 15px;
+}

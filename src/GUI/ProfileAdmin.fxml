@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="GUI.ProfileAdminController">
+   <children>
+      <Label layoutX="71.0" layoutY="143.0" text="profile admin" />
+      <Button layoutX="394.0" layoutY="148.0" mnemonicParsing="false" onMouseClicked="#logout" text="LogOut" />
+   </children>
+</AnchorPane>

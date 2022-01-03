@@ -1,0 +1,106 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+    
+}
+.Partenaire{
+    -fx-stroke: #2990cc;
+}
+
+.OtherSms{
+    -fx-background-color: #D3D3D3;
+    -fx-background-radius: 10px;
+    -fx-border-radius:10px;
+}
+
+.OwnSms{
+    -fx-background-color: #1e90ff;
+    -fx-background-radius: 10px;
+    -fx-border-radius:10px;
+}
+
+.SendBtn{
+    -fx-fill: #D3D3D3;
+    -fx-cursor: hand;
+}
+.SendBtn:hover{
+    -fx-fill: #2990cc;
+    -fx-cursor: hand;
+}
+
+.commentText{
+    -jfx-unfocus-color: #D3D3D3;
+    -jfx-focus-color: #2990cc;
+    -fx-focus-traversable: false;
+}
+
+.commentText:out-of-range{
+    -jfx-unfocus-color: #D3D3D3;
+    -jfx-focus-color: #2990cc;
+    -fx-focus-traversable: false;
+    
+}
+
+.CommentBtn{
+    -fx-text-fill: #fff;
+    -fx-font-family: 'Yu Gothic Medium';
+    -fx-background-color : #8d8d8d;
+    -fx-background-radius: 5px;
+}
+
+.CommentBtn:hover{
+    -fx-text-fill: #000;
+    -fx-font-family: 'Yu Gothic Medium';
+    -fx-background-color : #2990cc;
+    -fx-background-radius: 5px;
+    -fx-cursor: hand;
+}
+
+.TextInfo{
+    -fx-font-family: 'Yu Gothic Medium';
+    -fx-background-color : #2990cc;
+    -fx-font-size: 15px;
+}
+
+.TextTitle{
+    -fx-font-family: 'Yu Gothic Medium';
+    -fx-font-size: 13px;
+}
+
+.TextDetail{
+    -fx-font-family: 'Yu Gothic Light';
+    -fx-font-size: 12px;
+}
+.DateText{
+    -fx-font-family: 'Yu Gothic Light';
+    -fx-font-size: 11px;
+}
+
+.SectionComment{
+    -fx-background-color : #fff;
+    -fx-opacity: 0.95;
+}
+
+.CommentTitle{
+    -fx-font-family: 'Yu Gothic Medium';
+    -fx-font-size: 20px;
+}
+
+.SingleComment{
+    -fx-background-color: #1e90ff;
+    -fx-background-radius: 10px;
+    -fx-border-radius:10px;
+}
+
+.OtherComment{
+    -fx-background-color: #D3D3D3;
+    -fx-background-radius: 10px;
+    -fx-border-radius:10px;
+}
+
+.CommentArea{
+    -fx-background-color: #D3D3D3;
+    -fx-border-color: #D3D3D3;
+}

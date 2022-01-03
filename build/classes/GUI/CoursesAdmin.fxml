@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="589.0" prefWidth="1022.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.CoursesAdminController">
+   <children>
+      <StackPane prefHeight="589.0" prefWidth="1021.0" style="-fx-background-color: white;" stylesheets="@style.css">
+         <children>
+            <Pane fx:id="pnlCustomer" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" stylesheets="@style.css" />
+            <Pane fx:id="pnlOrders" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" stylesheets="@style.css" />
+            <Pane fx:id="pnlOverview" prefHeight="582.0" prefWidth="1007.0" style="-fx-background-color: white;" stylesheets="@style.css">
+               <children>
+                  <TextField fx:id="rech" layoutX="694.0" layoutY="92.0" onAction="#ChercherCourses" onInputMethodTextChanged="#ChercherCourses" prefHeight="27.0" prefWidth="179.0" promptText="search" style="-fx-border-color: black;" />
+                  <Label layoutX="479.0" layoutY="37.0" style="-fx-background-color: white;" stylesheets="@style.css" text="Liste des Courses">
+                     <font>
+                        <Font name="System Bold Italic" size="24.0" />
+                     </font>
+                  </Label>
+                  <Hyperlink fx:id="voirInventaire" layoutX="345.0" layoutY="109.0" onAction="#goToInventaire" text="Voir Inventaire">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Hyperlink>
+                  <HBox alignment="CENTER_LEFT" layoutX="-1.0" layoutY="178.0" prefHeight="42.0" prefWidth="793.0" spacing="80.0" style="-fx-background-color: white;" />
+                  <ImageView fitHeight="17.0" fitWidth="16.0" layoutX="849.0" layoutY="97.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/icons8_search_24px.png" />
+                     </image>
+                  </ImageView>
+                  <VBox fx:id="pnItems" layoutX="319.0" layoutY="143.0" prefHeight="340.0" prefWidth="684.0" spacing="5.0" style="-fx-background-color: #02030A;" stylesheets="@style.css">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <children>
+                        <TableView fx:id="afficher_courses" prefHeight="333.0" prefWidth="758.0">
+                           <columns>
+                              <TableColumn fx:id="afficher_courses_id" prefWidth="75.0" text="ID" />
+                              <TableColumn fx:id="afficher_courses_client" prefWidth="98.4000244140625" text="Client" />
+                              <TableColumn fx:id="afficher_courses_partenaire" prefWidth="164.8000030517578" text="Partenaire" />
+                              <TableColumn fx:id="afficher_courses_depart" prefWidth="158.4000244140625" text="Depart" />
+                              <TableColumn fx:id="afficher_courses_destination" minWidth="0.0" onEditCommit="#updateDestination" prefWidth="159.99993896484375" text="Destination" />
+                              <TableColumn fx:id="afficher_courses_prix" prefWidth="103.20001220703125" text="Prix" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </VBox>
+                  <Button fx:id="delete_course" layoutX="585.0" layoutY="492.0" mnemonicParsing="false" onAction="#deleteCourse" style="-fx-background-color: white;" text="Supprimer l'élement séléctionné" />
+               </children>
+            </Pane>
+         </children>
+      </StackPane>
+      <VBox fx:id="vbox" alignment="CENTER" prefHeight="589.0" prefWidth="305.0" style="-fx-background-color: #48A5EA;" stylesheets="@style.css">
+         <children>
+            <ImageView fitHeight="73.0" fitWidth="67.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons/icons8_user_50px.png" />
+               </image>
+               <VBox.margin>
+                  <Insets bottom="10.0" top="50.0" />
+               </VBox.margin>
+            </ImageView>
+            <Label style="-fx-background-color: #48A5EA;" text="Anes temani" textFill="#e7e5e5">
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+            </Label>
+            <Button fx:id="clients1" alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="10.0" layoutY="239.0" mnemonicParsing="false" onAction="#goToAcceuil" prefHeight="42.0" prefWidth="366.0" style="-fx-background-color: #48A5EA;" stylesheets="@style.css" text="Accueil" underline="true">
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/icons8_home_24px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="clients" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#goToclients" prefHeight="42.0" prefWidth="366.0" style="-fx-background-color: #48A5EA;" stylesheets="@style.css" text="Gestion des clients" underline="true">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/icons8_male_user_26px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+            <Button fx:id="partenaires" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#goToPartenaire" prefHeight="42.0" prefWidth="378.0" style="-fx-background-color: #48A5EA;" stylesheets="@style.css" text="Gestion des partenaires" underline="true">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/icons8_user_24px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+            <Button fx:id="reservations" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#goToReservation" prefHeight="42.0" prefWidth="366.0" style="-fx-background-color: #48A5EA;" stylesheets="@style.css" text="Gestion des reservations" underline="true">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="82.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/icons8_delivery_26px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+            <Button fx:id="reservations1" alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="10.0" layoutY="300.0" mnemonicParsing="false" onAction="#goToCourse" prefHeight="42.0" prefWidth="341.0" style="-fx-background-color: #48A5EA;" stylesheets="@style.css" text="Gestion des courses" underline="true">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/icons8_in_transit_26px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+            <Button fx:id="abonnements" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#goToAbonne" prefHeight="42.0" prefWidth="329.0" style="-fx-background-color: #48A5EA;" stylesheets="@style.css" text="Gestion des abonnements" underline="true">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/icons8_membership_card_24px_1.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+            <Button fx:id="feedback" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#goToFeedBack" prefHeight="42.0" prefWidth="328.0" style="-fx-background-color: #48A5EA;" stylesheets="@style.css" text="FeedBack" underline="true">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/icons8_comments_24px_1.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+            <Button fx:id="logout" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="327.0" style="-fx-background-color: #48A5EA;" stylesheets="@style.css" text="Se deconnecter" underline="true">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/icons8_sign_out_26px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

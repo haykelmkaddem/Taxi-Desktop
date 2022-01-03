@@ -1,0 +1,56 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Apr 11, 2020, 3:43:30 PM
+    Author     : USER
+*/
+
+.BlockDisplay   {
+    -fx-background-color: #fff;
+}
+.BlockSeparator{
+    -fx-background-color: #2990cc;
+    -fx-opacity: 0.5;
+    -fx-border-radius: 20px;
+}
+
+.ImageBlock{
+    -fx-arc-height:20px;
+    -fx-arc-width:20px;
+}
+
+.Partenaire{
+    -fx-stroke: #2990cc;
+}
+
+.Star{
+    -fx-fill: #D3D3D3;
+    -fx-cursor: hand;
+}
+
+.StarSelected{
+    -fx-fill: #ffff00;
+    -fx-cursor: hand;
+}
+
+.SeeMoreBtn{
+    -fx-text-fill: #fff;
+    -fx-font-family: 'Yu Gothic Medium';
+    -fx-background-color : #8d8d8d;
+    -fx-background-radius: 0px;
+}
+.SeeMoreBtn:hover{
+    -fx-text-fill: #000;
+    -fx-font-family: 'Yu Gothic Medium';
+    -fx-background-color : #2990cc;
+    -fx-background-radius: 0px;
+    -fx-cursor: hand;
+}
+
+.TitleLabel{
+    -fx-font-family: 'Yu Gothic Medium';
+    -fx-background-color : #8d8d8d;
+}

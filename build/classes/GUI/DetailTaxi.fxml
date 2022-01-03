@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#EndComment" onMouseClicked="#Time" prefHeight="437.0" prefWidth="444.0" style="-fx-background-color: #FFF;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.DetailTaxiController">
+   <children>
+      <Rectangle fx:id="taxi" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="250.0" layoutX="16.0" layoutY="17.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="250.0" />
+      <Circle fx:id="part" fill="DODGERBLUE" layoutX="266.0" layoutY="257.0" radius="61.0" stroke="BLACK" strokeType="INSIDE" styleClass="Partenaire" />
+      <Label layoutX="280.0" layoutY="33.0" prefHeight="25.0" prefWidth="153.0" styleClass="TextInfo" text="       Twasalni Info" />
+      <Pane layoutX="270.0" layoutY="56.0" prefHeight="92.0" prefWidth="170.0">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" styleClass="TextTitle" text="Date : " />
+            <Label layoutX="14.0" layoutY="38.0" styleClass="TextTitle" text="Lieu :" />
+            <Label layoutX="14.0" layoutY="67.0" styleClass="TextTitle" text="Contact : " />
+            <Label fx:id="date" layoutX="54.0" layoutY="14.0" prefHeight="17.0" prefWidth="114.0" styleClass="DateText" text="Date" />
+            <Label fx:id="lieu" layoutX="54.0" layoutY="38.0" prefHeight="17.0" prefWidth="107.0" styleClass="TextDetail" text="Lieu" />
+            <Label fx:id="contact" layoutX="72.0" layoutY="67.0" prefHeight="17.0" prefWidth="90.0" styleClass="TextDetail" text="+216 -- -- -- -- " />
+         </children>
+      </Pane>
+      <Label layoutX="25.0" layoutY="282.0" prefHeight="17.0" prefWidth="160.0" styleClass="TextInfo" text="      Info Sur Le Taxi " />
+      <Pane layoutX="25.0" layoutY="301.0" prefHeight="59.0" prefWidth="200.0">
+         <children>
+            <Label layoutX="2.0" layoutY="4.0" styleClass="TextTitle" text="Matricule :" />
+            <Label layoutX="3.0" layoutY="21.0" styleClass="TextTitle" text="Marque :" />
+            <Label layoutX="4.0" layoutY="41.0" styleClass="TextTitle" text="Disponible :" />
+            <Label fx:id="matricule" layoutX="78.0" layoutY="6.0" prefHeight="17.0" prefWidth="114.0" styleClass="TextDetail" text="171MT4578" />
+            <Label fx:id="marque" layoutX="66.0" layoutY="21.0" prefHeight="15.0" prefWidth="122.0" styleClass="TextDetail" text="Toyota" />
+            <Label fx:id="dispo" layoutX="82.0" layoutY="41.0" prefHeight="17.0" prefWidth="107.0" styleClass="TextDetail" text="Oui" />
+         </children>
+      </Pane>
+      <Label layoutX="253.0" layoutY="331.0" prefHeight="17.0" prefWidth="170.0" styleClass="TextInfo" text="   Info Sur Le Taxiste" />
+      <Pane layoutX="145.0" layoutY="366.0" prefHeight="65.0" prefWidth="278.0">
+         <children>
+            <Label layoutY="-1.0" styleClass="TextTitle" text="Nom :" />
+            <Label layoutX="-1.0" layoutY="23.0" styleClass="TextTitle" text="Prenom :" />
+            <Label layoutY="42.0" text="Email :" />
+            <Label fx:id="nom" layoutX="44.0" layoutY="1.0" prefHeight="17.0" prefWidth="71.0" styleClass="TextDetail" text="Dodo" />
+            <Label fx:id="prenom" layoutX="59.0" layoutY="23.0" prefHeight="17.0" prefWidth="90.0" styleClass="TextDetail" text="Maurel" />
+            <Label fx:id="email" layoutX="41.0" layoutY="43.0" prefHeight="17.0" prefWidth="192.0" styleClass="TextDetail" text="dodo@maurel.com" />
+            <Label layoutX="128.0" layoutY="2.0" styleClass="TextTitle" text="Telephone :" />
+            <Label fx:id="tel" layoutX="203.0" layoutY="3.0" styleClass="TextDetail" text="54641920" />
+         </children>
+      </Pane>
+      <JFXButton fx:id="comment" layoutX="287.0" layoutY="155.0" onMouseClicked="#SectionCommentaire" prefHeight="25.0" prefWidth="136.0" ripplerFill="BLACK" styleClass="CommentBtn" text="Commentez" />
+      <FontAwesomeIcon fx:id="etoile1" iconName="STAR" layoutX="23.0" layoutY="258.0" size="1.2em" styleClass="Star" />
+      <FontAwesomeIcon fx:id="etoile2" iconName="STAR" layoutX="39.0" layoutY="258.0" size="1.2em" styleClass="Star" />
+      <FontAwesomeIcon fx:id="etoile3" iconName="STAR" layoutX="54.0" layoutY="258.0" size="1.2em" styleClass="Star" />
+      <FontAwesomeIcon fx:id="etoile4" iconName="STAR" layoutX="69.0" layoutY="258.0" size="1.2em" styleClass="Star" />
+      <FontAwesomeIcon fx:id="etoile5" iconName="STAR" layoutX="84.0" layoutY="258.0" size="1.2em" styleClass="Star" />
+      <Pane fx:id="CSection" layoutX="70.0" layoutY="4.0" prefHeight="425.0" prefWidth="362.0" styleClass="SectionComment">
+         <children>
+            <Label layoutX="119.0" layoutY="14.0" styleClass="CommentTitle" text="Commentaires" />
+            <ScrollPane layoutX="14.0" layoutY="43.0" prefHeight="297.0" prefWidth="343.0">
+               <content>
+                  <VBox fx:id="liste_com" prefHeight="160.0" prefWidth="340.0" />
+               </content>
+            </ScrollPane>
+            <JFXTextArea fx:id="Text" focusTraversable="false" layoutX="14.0" layoutY="358.0" prefHeight="59.0" prefWidth="299.0" promptText="Laissez Votre Commentaire" styleClass="commentText" wrapText="true">
+               <font>
+                  <Font name="Yu Gothic UI Light" size="11.0" />
+               </font>
+            </JFXTextArea>
+            <FontAwesomeIcon fx:id="SendBtn" iconName="SEND" layoutX="330.0" layoutY="415.0" onMouseClicked="#SendComment" size="2em" styleClass="SendBtn" />
+            <FontAwesomeIcon fx:id="star5" iconName="STAR" layoutX="334.0" layoutY="358.0" onMouseClicked="#ValidRate5" onMouseEntered="#RateSelector5" onMouseExited="#RateExit5" size="1.2em" styleClass="Star" />
+            <FontAwesomeIcon fx:id="star4" iconName="STAR" layoutX="321.0" layoutY="358.0" onMouseClicked="#ValidRate4" onMouseEntered="#RateSelector4" onMouseExited="#RateExit4" size="1.2em" styleClass="Star" />
+            <FontAwesomeIcon fx:id="star3" iconName="STAR" layoutX="307.0" layoutY="358.0" onMouseClicked="#ValidRate3" onMouseEntered="#RateSelector3" onMouseExited="#RateExit3" size="1.2em" styleClass="Star" />
+            <FontAwesomeIcon fx:id="star2" iconName="STAR" layoutX="294.0" layoutY="358.0" onMouseClicked="#ValidRate2" onMouseEntered="#RateSelector2" onMouseExited="#RateExit2" size="1.2em" styleClass="Star" />
+            <FontAwesomeIcon fx:id="star1" iconName="STAR" layoutX="279.0" layoutY="358.0" onMouseClicked="#ValidRate1" onMouseEntered="#RateSelector1" onMouseExited="#RateExit1" size="1.2em" styleClass="Star" />
+         </children>
+      </Pane>
+   </children>
+   <stylesheets>
+      <URL value="@../CSS/detailtaxi.css" />
+      <URL value="@../CSS/main.css" />
+   </stylesheets>
+</AnchorPane>

@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="620.0" prefWidth="930.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.ReservationDetailController">
+   <children>
+      <StackPane prefHeight="633.0" prefWidth="990.0" style="-fx-background-color: #02030A;" stylesheets="@style.css">
+         <children>
+            <Pane fx:id="pnlCustomer" prefHeight="200.0" prefWidth="973.0" style="-fx-background-color: white;" stylesheets="@style.css" />
+            <Pane fx:id="pnlOrders" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" stylesheets="@style.css" />
+            <Pane fx:id="pnlOverview" prefHeight="633.0" prefWidth="986.0" style="-fx-background-color: white;" stylesheets="@style.css">
+               <children>
+                  <Label layoutX="396.0" layoutY="40.0" stylesheets="@style.css" text="Réservation N°">
+                     <font>
+                        <Font name="System Bold Italic" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="368.0" layoutY="140.0" text="Client details">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Hyperlink fx:id="linkTotraited" layoutX="384.0" layoutY="550.0" text="Voir les reservations traitées">
+                     <font>
+                        <Font size="17.0" />
+                     </font></Hyperlink>
+                  <Label fx:id="Numero" layoutX="575.0" layoutY="41.0" prefHeight="36.0" prefWidth="147.0">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <Hyperlink fx:id="linkTonottraited" layoutX="384.0" layoutY="573.0" text="Voir les reservations non traitées">
+                     <font>
+                        <Font size="17.0" />
+                     </font></Hyperlink>
+                  <Label layoutX="370.0" layoutY="175.0" text="Nom:" />
+                  <Label layoutX="370.0" layoutY="193.0" text="Prenom:" />
+                  <Label layoutX="371.0" layoutY="217.0" text="Mobile:" />
+                  <Label layoutX="781.0" layoutY="140.0" text="Date:">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <ScrollPane layoutX="338.0" layoutY="270.0" prefHeight="74.0" prefWidth="647.0" style="-fx-background-color: white;" stylesheets="@style.css">
+                     <content>
+                        <TableView fx:id="tableview" accessibleRole="IMAGE_VIEW" prefHeight="71.0" prefWidth="645.0" stylesheets="@style.css">
+                           <columns>
+                              <TableColumn fx:id="produit" prefWidth="166.0" text="Produit" />
+                              <TableColumn fx:id="pointA" minWidth="0.0" prefWidth="148.0" text="Point d'achat" />
+                              <TableColumn fx:id="Destination" prefWidth="165.0" text="Destination" />
+                              <TableColumn fx:id="Remarques" prefWidth="172.0" text="Remarques" />
+                           </columns>
+                        </TableView>
+                     </content>
+                  </ScrollPane>
+                  <Label layoutX="674.0" layoutY="405.0" text="Frais de livraison:">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="674.0" layoutY="438.0" text="Total: ">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="735.0" layoutY="463.0" text="+ Prix de commande" textFill="RED">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="accepter" layoutX="355.0" layoutY="446.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="127.0" style="-fx-background-color: green;" text="Accepter commande" />
+                  <Button fx:id="refuser" layoutX="493.0" layoutY="446.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="127.0" style="-fx-background-color: red;" text="Refuser commande" />
+                  <Label fx:id="prix" layoutX="729.0" layoutY="436.0" text="prix">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="777.0" layoutY="438.0" text="DT">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="prix1" layoutX="806.0" layoutY="403.0" text="prix1">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="853.0" layoutY="404.0" text="DT">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="date" layoutX="831.0" layoutY="139.0" text="Label">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="nom" layoutX="408.0" layoutY="173.0" text="nom" />
+                  <Label fx:id="prenom" layoutX="419.0" layoutY="192.0" text="prenom" />
+                  <Label fx:id="mobile" layoutX="422.0" layoutY="216.0" text="mobile" />
+                  <Hyperlink fx:id="linkTonottraited1" layoutX="668.0" layoutY="549.0" onAction="#InventairPaid" text="Voir les inventaires payés">
+                     <font>
+                        <Font size="17.0" />
+                     </font></Hyperlink>
+                  <Hyperlink fx:id="linkTonottraited11" layoutX="669.0" layoutY="576.0" onAction="#InventairenotPaid" text="Voir  les inventaires non payés">
+                     <font>
+                        <Font size="17.0" />
+                     </font></Hyperlink>
+               </children>
+            </Pane>
+         </children>
+      </StackPane>
+      <VBox fx:id="vbox" alignment="CENTER" layoutX="-2.0" prefHeight="633.0" prefWidth="335.0" style="-fx-background-color: #48A5EA;" stylesheets="@style.css">
+         <children>
+            <ImageView fitHeight="73.0" fitWidth="67.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons/icons8_user_50px.png" />
+               </image>
+               <VBox.margin>
+                  <Insets bottom="10.0" top="50.0" />
+               </VBox.margin>
+            </ImageView>
+            <Label style="-fx-background-color: #48A5EA;" text="Anes temani" textFill="#e7e5e5">
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+            </Label>
+            <Button fx:id="clients1" alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="10.0" layoutY="239.0" mnemonicParsing="false" onAction="#goToAcceuil" prefHeight="42.0" prefWidth="366.0" style="-fx-background-color: #48A5EA;" stylesheets="@style.css" text="Accueil" underline="true">
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/icons8_home_24px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="clients" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#goToclients" prefHeight="42.0" prefWidth="366.0" style="-fx-background-color: #48A5EA;" stylesheets="@style.css" text="Gestion des clients" underline="true">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/icons8_male_user_26px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+            <Button fx:id="partenaires" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#goToPartenaire" prefHeight="42.0" prefWidth="378.0" style="-fx-background-color: #48A5EA;" stylesheets="@style.css" text="Gestion des partenaires" underline="true">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/icons8_user_24px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+            <Button fx:id="reservations" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#goToReservation" prefHeight="42.0" prefWidth="366.0" style="-fx-background-color: #48A5EA;" stylesheets="@style.css" text="Gestion des reservations" underline="true">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="82.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/icons8_delivery_26px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+            <Button fx:id="reservations1" alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="10.0" layoutY="300.0" mnemonicParsing="false" onAction="#goToCourse" prefHeight="42.0" prefWidth="341.0" style="-fx-background-color: #48A5EA;" stylesheets="@style.css" text="Gestion des courses" underline="true">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/icons8_in_transit_26px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+            <Button fx:id="abonnements" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#goToAbonne" prefHeight="42.0" prefWidth="329.0" style="-fx-background-color: #48A5EA;" stylesheets="@style.css" text="Gestion des abonnements" underline="true">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/icons8_membership_card_24px_1.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+            <Button fx:id="feedback" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#goToFeedBack" prefHeight="42.0" prefWidth="328.0" style="-fx-background-color: #48A5EA;" stylesheets="@style.css" text="FeedBack" underline="true">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/icons8_comments_24px_1.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+            <Button fx:id="logout" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="327.0" style="-fx-background-color: #48A5EA;" stylesheets="@style.css" text="Se deconnecter" underline="true">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/icons8_sign_out_26px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.SepiaTone?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.AjoutReservationController">
+   <children>
+      <AnchorPane id="AnchorPane" prefHeight="417.0" prefWidth="700.0">
+         <children>
+            <Label layoutX="133.0" layoutY="31.0" text="Ajouter une Reservation" textFill="#48a5ea">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <JFXComboBox fx:id="partenaire_ajout" focusColor="#48a5ea" labelFloat="true" layoutX="133.0" layoutY="92.0" prefHeight="25.0" prefWidth="217.0" />
+            <JFXButton layoutX="133.0" layoutY="349.0" onAction="#Reset" prefHeight="29.0" prefWidth="116.0" text="Reset All" />
+            <JFXButton fx:id="ajout" layoutX="524.0" layoutY="349.0" onAction="#AjouterReservation" prefHeight="39.0" prefWidth="116.0" style="-fx-background-color: #48A5EA;" text="Confirmer" textFill="WHITE" />
+            <Separator layoutX="133.0" layoutY="68.0" prefHeight="1.0" prefWidth="520.0" />
+            <JFXTextField fx:id="Destination" focusColor="#48a5ea" layoutX="133.0" layoutY="298.0" prefHeight="25.0" prefWidth="217.0" promptText="Destination" />
+            <JFXTextField fx:id="Remarques" focusColor="#48a5ea" layoutX="402.0" layoutY="182.0" prefHeight="116.0" prefWidth="273.0" />
+            <DatePicker fx:id="date_reservation" layoutX="402.0" layoutY="121.0" prefHeight="29.0" prefWidth="207.0">
+               <effect>
+                  <SepiaTone level="0.12" />
+               </effect>
+            </DatePicker>
+            <Text layoutX="402.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date" />
+            <Text layoutX="401.0" layoutY="198.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Remarques" />
+            <Label fx:id="success" layoutX="433.0" layoutY="44.0" textFill="#14b914">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="error" layoutX="433.0" layoutY="44.0" textFill="#ff3a2f">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Text layoutX="133.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choisir un partenaire" />
+            <Pane prefHeight="417.0" prefWidth="110.0" style="-fx-background-color: #48A5EA;">
+               <children>
+                  <ImageView fitHeight="116.0" fitWidth="116.0" layoutX="-3.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/logo3.png" />
+                     </image>
+                  </ImageView>
+                  <Text fill="WHITE" layoutX="19.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Twasalni ?" textAlignment="RIGHT" wrappingWidth="67.5911425203085" />
+                  <Group layoutX="9.0" layoutY="132.0">
+                     <children>
+                        <Hyperlink fx:id="admin" layoutX="5.0" layoutY="254.0" onAction="#goToAdmin" prefHeight="26.0" prefWidth="88.0" text="Admin Page" textFill="WHITE" />
+                        <Hyperlink fx:id="Accueil" onAction="#goToAcceuil" prefHeight="26.0" prefWidth="88.0" text="Accueil" textFill="WHITE" />
+                        <Hyperlink fx:id="profil" layoutY="35.0" onAction="#goToProfil" prefHeight="26.0" prefWidth="88.0" text="Profil" textFill="WHITE" />
+                        <Hyperlink fx:id="reservation" layoutX="1.0" layoutY="66.0" onAction="#goToReservation" prefHeight="26.0" prefWidth="88.0" text="Reservation" textFill="WHITE" />
+                        <Hyperlink fx:id="course" layoutX="2.0" layoutY="100.0" onAction="#goToCourse" prefHeight="26.0" prefWidth="88.0" text="Course" textFill="WHITE" />
+                        <Hyperlink fx:id="abonnement" layoutX="3.0" layoutY="132.0" onAction="#goToAbonne" prefHeight="26.0" prefWidth="88.0" text="Abonnement" textFill="WHITE" />
+                        <Hyperlink fx:id="login" layoutX="5.0" layoutY="201.0" onAction="#goToLogin" prefHeight="26.0" prefWidth="88.0" text="Login" textFill="WHITE" />
+                        <Hyperlink fx:id="feedback" layoutX="5.0" layoutY="166.0" onAction="#goToFeedBack" onMouseClicked="#FeedMenu" prefHeight="26.0" prefWidth="88.0" text="FeedBack" textFill="WHITE" />
+                     </children>
+                  </Group>
+               </children>
+            </Pane>
+            <JFXComboBox fx:id="PointA" focusColor="#48a5ea" labelFloat="true" layoutX="134.0" layoutY="200.0" prefHeight="25.0" prefWidth="217.0" />
+            <Text layoutX="133.0" layoutY="193.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choisir un point d'achat" />
+            <JFXComboBox fx:id="Produit" focusColor="#48a5ea" labelFloat="true" layoutX="134.0" layoutY="260.0" prefHeight="25.0" prefWidth="217.0" />
+            <Text layoutX="133.0" layoutY="253.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choisir un produit" />
+         </children>
+      </AnchorPane>
+      <JFXComboBox fx:id="Region" focusColor="#48a5ea" labelFloat="true" layoutX="133.0" layoutY="148.0" prefHeight="25.0" prefWidth="217.0" />
+      <Text layoutX="132.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choisir une region" />
+   </children>
+</AnchorPane>

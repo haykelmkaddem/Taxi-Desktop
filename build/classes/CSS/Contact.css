@@ -1,0 +1,108 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Mar 28, 2020, 7:58:50 AM
+    Author     : USER
+*/
+
+.BorderPane{
+    -fx-background-color: #2990cc;
+}
+
+.MainBackGroundColor{
+    -fx-background-color: #fff;
+}
+
+.MenuBackgroundColor{
+    -fx-background-color: #fff;
+}
+
+.Title{
+    -fx-text-fill: #000;
+    -fx-font-size: 30;
+    -fx-font-family: 'Yu Gothic Medium';
+}
+
+.TextContent{
+    -jfx-unfocus-color: #8d8d8d;
+    -jfx-focus-color: #2990cc;
+}
+
+.SendBtn{
+    -fx-text-fill: #fff;
+    -fx-font-family: 'Yu Gothic Medium';
+    -fx-background-color : #8d8d8d;
+    -fx-background-radius: 5px;
+}
+.SendBtn:hover{
+    -fx-text-fill: #000;
+    -fx-font-family: 'Yu Gothic Medium';
+    -fx-background-color : #2990cc;
+    -fx-background-radius: 5px;
+    -fx-cursor: hand;
+}
+
+.TextDescription{
+    -fx-text-fill: #000;
+    -fx-font-family: 'Yu Gothic Medium';
+}
+
+.TextError{
+    -fx-text-fill: #ff0000;
+    -fx-font-family: 'Yu Gothic Medium';
+}
+
+.AllError{
+    -fx-font-size: 15;
+    -fx-text-fill: #8d8d8d;
+    -fx-font-family: 'Yu Gothic Medium';
+}
+
+.TextCorrect{
+    -fx-text-fill:  #00e600;
+    -fx-font-family: 'Yu Gothic Medium';
+}
+
+.TextContainer{
+    -fx-background-color: #fff;
+    -fx-border-color: #8d8d8d;
+    -fx-border-radius: 0px;
+    -fx-cursor: text;
+}
+.TextContainer:focused{
+    -fx-background-color: #fff;
+    -fx-border-color: #2990cc;
+    -fx-border-radius: 0px;
+    -fx-cursor: text;
+}
+
+.CancelBtn{
+    -fx-text-fill: #fff;
+    -fx-font-family: 'Yu Gothic Medium';
+    -fx-background-color : #8d8d8d;
+    -fx-background-radius: 5px;
+}
+.CancelBtn:hover{
+    -fx-text-fill: #000;
+    -fx-font-family: 'Yu Gothic Medium';
+    -fx-background-color : #C21F47;
+    -fx-background-radius: 5px;
+    -fx-cursor: hand;
+}
+
+.FormValid{
+    -fx-background-color: #fff;
+    -fx-border-color: #00e600;
+    -fx-border-radius: 0px;
+    -fx-cursor: text;
+}
+
+.FormError{
+    -fx-background-color: #fff;
+    -fx-border-color: #C21F47;
+    -fx-border-radius: 0px;
+    -fx-cursor: text;
+}

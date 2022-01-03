@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="412.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="GUI.AjoutTaxiController">
+   <children>
+      <Pane layoutX="78.0" layoutY="91.0" prefHeight="256.0" prefWidth="251.0" style="-fx-background-color: #47DEEA;">
+         <children>
+            <TextField fx:id="mat" layoutX="23.0" layoutY="41.0" />
+            <TextField fx:id="mar" layoutX="23.0" layoutY="128.0" />
+            <Label layoutX="23.0" layoutY="14.0" text="Matricule" />
+            <Label layoutX="27.0" layoutY="95.0" text="Marque" />
+            <Button layoutX="91.0" layoutY="189.0" mnemonicParsing="false" onMouseClicked="#CreateTaxi" text="Create Taxi" />
+         </children>
+      </Pane>
+      <Button layoutX="17.0" layoutY="29.0" mnemonicParsing="false" onMouseClicked="#ToProfile" text="Profile" />
+   </children>
+</AnchorPane>
